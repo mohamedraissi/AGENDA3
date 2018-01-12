@@ -1,0 +1,73 @@
+#header{
+  margin-bottom: 40px;
+}
+.a{ margin-top: 30px;
+}
+#b{
+	text-align: center;
+}
+
+h1{
+	color: inherit;
+}
+body{
+	background-color: #f1f1f1;
+}
+
+#c{
+		text-align: center;
+
+}
+
+img
+{
+	display: block;
+    margin: auto;
+}
+
+.images{
+position: relative;
+top: 10px;
+	text-align: center;
+}
+
+#rs{
+	position: relative;
+	top:30px;
+}
+
+form { margin-top: 10%;
+	  width: 40%;
+      text-align: center;
+      margin-left: 30%;
+  }
+
+img{ margin-bottom: 5%;}
+
+
+
+.insc{
+	  width: 80%;
+      text-align: center;
+      margin: auto;
+      margin-top: -2%;
+  }
+
+.bn{color: #000000;}
+
+.fpro{width: 80%;
+      text-align: center;
+      margin: auto;
+      margin-top: -2%;}
+.modal-dialog{
+  max-width: 1000px;
+}
+.fc-event .fc-bg{
+  background:#20c997;
+  color: white;
+  opacity: 1;
+}
+.fpro{width: 80%;
+      text-align: center;
+      margin: auto;
+      margin-top: -2%;}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {{ title }}
+    </title>
+    <meta charset='utf-8' />
+    <link href='/css/fullcalendar.min.css' rel='stylesheet' />
+    <link href='/css/minty.min.css' rel='stylesheet' />
+    <link href='/css/style.css' rel='stylesheet' />
+    <link href='/css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <style>
+      body {
+        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      {% include "partials/header.html" %}
+    </div>
+    <script src='/js/jquery.min.js'></script>
+    <script src='/js/main.js'></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <div class="container">
+      <span class="alert1">
+
+      </span>
+      {% if  sessionFlash %}
+      <div class="alert alert-success">
+        {{sessionFlash.message}}
+      </div>
+      {% endif %}
+      {% if errors %}
+        <ul class="alert alert-warning">
+          {% for error in errors %}
+            <li>{{ error.msg }}</li>
+            {% endfor %}
+        </ul>
+      {% endif %}
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

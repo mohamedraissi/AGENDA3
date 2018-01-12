@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row top">
+     <div class="col-sm-4 "><h4>Bienvenue Docteur,</h4></div>
+       <div class="col-sm-4">
+         <h4 ><img src="/images/male.png" width="250px" height="253px"></h4>
+           <div class="col-sm-4"></div>
+           </div>
+      <div class="col-sm-4"></div>
+</div>
+<div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="card text-white bg-primary mb-3" style="max-width : 100%">
+             <div class="card-header"><strong>Informations</strong><span class="pull-right"><a role="button" data-id="{{patient[0]._id}}" class="btn btn-danger delete-rdv">Annulation RDV</a></span></div>
+             <div class="card-body">
+               <p class="card-text">Nom :{{patient[0].patient.lastname}} </p>
+               <p class="card-text">Prénom:{{patient[0].patient.firstname}}</p>
+               <p class="card-text">Date prise : {{patient[0].debut}}</p>
+               <p class="card-text">{{patient[0].debut}}</p>
+               <p class="card-text">{{patient[0].debut}}</p>
+               <p class="card-text">Adresse : {{patient[0].patient.adresse}}</p>
+               <p class="card-text">Télephone : {{patient[0].patient.tel}}</p>
+             </div>
+           </div>
+       </div>
+       <div class="col-sm-2"></div>
+     </div>
+</div>
+{% endblock %}

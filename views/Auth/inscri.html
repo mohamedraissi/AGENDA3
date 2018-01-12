@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="insc">
+ <form method="POST" action="/user/inscription">
+   <h1 id="b">S'inscrire</h1>
+  <fieldset>
+   <img src="/images/male.png">
+   <div class="row">
+     <div class="col-md-6">
+       <div class="form-group">
+        <label for="nom">Votre Nom</label>
+        <input type="text" class="form-control" id="nom"  placeholder="Entrer votre nom" name="lastname">
+      </div>
+     </div>
+     <div class="col-md-6">
+           <div class="form-group">
+            <label for="prenom">Votre Prénom</label>
+            <input type="text" class="form-control" id="prenom" aria-describedby="emailHelp" placeholder="Entrer votre prenom" name="firstname">
+          </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-6">
+       <div class="form-group">
+        <label for="nom">Votre Telephone</label>
+        <input type="text" class="form-control" id="nom"  placeholder="Entrer votre tel" name="tel">
+      </div>
+     </div>
+     <div class="col-md-6">
+           <div class="form-group">
+            <label for="prenom">Votre Adresse</label>
+            <input type="text" class="form-control" id="prenom" aria-describedby="emailHelp" placeholder="Entrer votre prenom" name="adresse">
+          </div>
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="nom_uti">Votre nom d'utilisateur</label>
+     <input type="text" class="form-control" id="nom_uti" aria-describedby="emailHelp" placeholder="Entrer votre pseduo" name="username">
+   </div>
+   <div class="row">
+     <div class="col-md-6">
+       <div class="form-group ">
+         <label for="exampleInputPassword1">Votre password</label>
+         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="entrer votre password" name="password">
+       </div>
+     </div>
+     <div class="col-md-6">
+       <div class="form-group ">
+         <label for="pass2">Confirmation password</label>
+         <input type="password" class="form-control" id="pass2" placeholder="entrer votre password">
+       </div>
+     </div>
+  </div>
+
+
+   <input type="submit" class="btn btn-primary btn-lg" value="S'inscrire">
+ </fieldset>
+ <a href="a.html">Déja inscris !</a>
+</form>
+</br>
+<img id="rs" src="/images/file2.png">
+</div>
+{% endblock %}

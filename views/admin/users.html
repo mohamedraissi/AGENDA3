@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table table-hover table-inverse">
+  <thead>
+    <tr>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Nom d'utlisateur</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      {% if user.role!='admin' %}
+      <tr>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.username }}</td>
+        <td>
+            <a role="button" class="btn  btn-secondary btn-xs delete-user" data-id="{{ user._id }}">supprimer</a>
+        </td>
+
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

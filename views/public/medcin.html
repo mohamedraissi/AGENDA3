@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row top">
+  <div class="col-sm-6">
+        <h4>Bienvenue Docteur,</h4>
+        <div class="col-sm-4"><img src="images/doctor1.png" style="width:130%;"></div>
+ </div>
+     <div class="col-sm-6" style="margin-bottom:20px;">
+       <div class="card text-white bg-primary mb-3" style="max-width : 100%">
+          <div class="card-header"><strong>Informations</strong></div>
+          <div class="card-body">
+            <p class="card-text">Nom : {{admin.lastname}}</p>
+            <p class="card-text">Prénom: {{admin.firstname}}</p>
+            <p class="card-text">Spécialité:  {{admin.specilaite}}</p>
+            <p class="card-text"></p>
+            <p class="card-text">Adresse : {{admin.adresse}}</p>
+            <p class="card-text">Télephone :{{admin.tel}}</p>
+          </div>
+        </div>
+    </div>
+</div>
+<div class="row"><div class="col-sm-12"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12750.043314548886!2d10.068905340215265!3d36.80990135881133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd326a6997b651%3A0xae1949b938bf5487!2sManouba!5e0!3m2!1sfr!2stn!4v1515623219870" width="100%" height="300%" frameborder="0" style="border:0" allowfullscreen></iframe></div></div>
+{% endblock %}

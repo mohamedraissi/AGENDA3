@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row top">
+  <div class="col-sm-6">
+        <h4>Bienvenue Mr/Mme,</h4>
+        <div class="col-sm-4"><div class="centrage"><img src="/images/male.png" width="250px" height="253px"></div></div>
+ </div>
+     <div class="col-sm-6">
+       <div class="card text-white bg-primary mb-3" style="max-width : 100%">
+          <div class="card-header"><strong>Informations</strong></div>
+          <div class="card-body">
+            <p class="card-text">Nom :{{patient[0].lastname}} </p>
+            <p class="card-text">Prénom:{{patient[0].firstname}} </p>
+            <p class="card-text"></p>
+            <p class="card-text">Adresse : {{patient[0].adresse}}</p>
+            <p class="card-text">Télephone : +216 {{patient[0].tel}}</p>
+            <input type="hidden" class="username" value="{{patient[0].username}}">
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-hover" style="color:white">
+  <thead class="bg-success">
+    <tr>
+      <th>#</th>
+      <th>date debut</th>
+      <th>date fin</th>
+      <th>description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for a in agenda %}
+    <tr style="color:black">
+      <th scope="row">1</th>
+      <td>{{a.debut}}</td>
+      <td>{{a.fin}}</td>
+      <td>{{a.description}}</td>
+      <td><a role="button" class="btn btn-danger delete-rdv" data-id="{{a._id}}" style="color:white">supprimer</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  </div>
+{% endblock %}

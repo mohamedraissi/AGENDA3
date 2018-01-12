@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+ <div class="col-sm-4"><img src="/images/male.png"></div>
+ <div class="col-sm-4"><h1 class="bn">Bienvenue</h1><h5>{{user.firstname}} {{user[0].lastname}}</h5><p> {{user.specilaite}} </p></div>
+ <div class="col-sm-4"><br></br><img src="/images/file2.png"></div>
+</div>
+<div class="col-sm-12">
+<form class="fpro">
+ <div class="row">
+  <div class="col-sm-6">
+       <div class="form-group">
+        <label for="nom">Votre Nom</label>
+        <input type="text" class="form-control" id="nom"  placeholder="Entrer votre nom" value="{{user.lastname}}">
+      </div>
+     </div>
+     <div class="col-sm-6">
+       <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" class="form-control" id="prenom" aria-describedby="emailHelp" placeholder="Entrer votre prenom" Value="{{user.firstname}}">
+      </div>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-sm-12">
+    <div class="form-group">
+      <label for="nom_uti">Votre psedo</label>
+      <input type="text" class="form-control" id="nom_uti" aria-describedby="emailHelp" placeholder="Entrer votre psedo" value="{{user.username}}">
+    </div>
+  </div>
+ </div>
+
+<div class="row">
+  <div class="col-sm-6">
+       <div class="form-group">
+        <label for="nom">Votre numéro téléphone</label>
+        <input type="text" class="form-control" id="nom"  placeholder="Entrer votre nom" value="{{user.tel}}">
+      </div>
+     </div>
+     <div class="col-sm-6">
+      <div class="form-group">
+      <label for="nom">Votre Spécilaité</label>
+      <input type="text" class="form-control" id="nom_uti" aria-describedby="emailHelp" placeholder="Entrer votre Spécilaité" value="{{user.specilaite}}">
+  </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+  <div class="form-group">
+    <label for="exampleInputPassword1">Votre password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="entrer votre password" value="admin">
+  </div>
+ </div>
+  <div class="col-sm-6">
+  <div class="form-group">
+    <label for="pass2">Confirmation password</label>
+    <input type="password" class="form-control" id="pass2" placeholder="entrer votre password" value="admin">
+  </div>
+ </div>
+</div>
+ <div class="row">
+     <div class="col-sm-4"></div>
+     <div class="col-sm-4"> <button type="submit" class="btn btn-primary btn-lg">Modifier</button></div>
+    <div class="col-sm-4"></div>
+ </div>
+</form>
+  </div>
+{% endblock %}

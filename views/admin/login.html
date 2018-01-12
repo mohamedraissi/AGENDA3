@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="/user/admin/connexion">
+  <h1 id="b">Se connecter </h1>
+  <fieldset>
+    <img src="/images/doctor1.png">
+    <div class="form-group">
+      <label for="pseduo">Votre pseduo</label>
+      <input type="text" class="form-control" id="pseduo" aria-describedby="emailHelp" placeholder="Entrer votre pseduo" name="username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Votre password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="entrer votre password" name="password">
+    </div>
+    <input type="submit" class="btn btn-primary btn-lg" value="Connexion">
+  </fieldset>
+</form>
+{% endblock %}

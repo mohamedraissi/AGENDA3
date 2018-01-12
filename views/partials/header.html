@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="col-md-3">
+    <a class="navbar-brand" href="/">E-Doctor</a>
+  </div>
+    <div class="col-md-7">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active {% if path=='/'%} bg-secondary {% endif %}">
+            <a class="nav-link" href="/"> Accueil  <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active {% if path=='/Medcin'%} bg-secondary {% endif %}">
+            <a class="nav-link" href="/Medcin"> Medcin  <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+  {% if user %}
+    {% if user.role=='patient'%}
+    <ul class="navbar-nav">
+      <li class="nav-item {% if path=='/agenda'%} bg-secondary {% endif %}">
+        <a class="nav-link" href="/agenda" style="color:white">Agenda</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item {% if path=='/user/profile/{{user.username}}'%} bg-secondary {% endif %}">
+        <a class="nav-link" href="/user/profile/{{user.username}}" style="color:white">Profile</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+      <div class="col-md-2">
+        <div class="dropdown nav navbar-nav navbar-right">
+          <a class=" dropdown-toggle navbar-brand" id="menu1"  data-toggle="dropdown" style="color:white;cursor: pointer;">{{user.username}}
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/user/deconnexion">Se déconnexion</a></li>
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+    {% if user.role=='admin'%}
+          <ul class="navbar-nav">
+            <li class="nav-item {% if path=='/user/admin/agenda'%} bg-secondary {% endif %}">
+              <a class="nav-link" href="/user/admin/agenda" style="color:white">Agenda</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active {% if path=='/user'%} bg-secondary {% endif %}">
+              <a class="nav-link" href="/user"> Vos patient  <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      </div>
+      </div>
+      <div class="col-md-2">
+        <div class="dropdown nav navbar-nav navbar-right">
+          <a class=" dropdown-toggle navbar-brand" id="menu1"  data-toggle="dropdown" style="color:white;cursor: pointer;">{{user.username}}
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="padding:10px;">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/user/admin/deconnexion">Se déconnexion</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/user/admin/coordonnees">Coordonnées medecin</a></li>
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+</nav>
